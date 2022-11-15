@@ -1,6 +1,16 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Rockets from './Rockets';
+import MyProfile from './MyProfile';
+import './Header.css';
+
+const underLine = (e) => {
+  if (e.target.classList.contains('link')) {
+    const links = document.querySelectorAll('.link');
+    links.forEach((link) => link.classList.remove('active'));
+    e.target.classList.add('active');
+  }
+};
 
 const Header = () => (
   <div>
@@ -9,13 +19,15 @@ const Header = () => (
         <h1 className="title"> Space Travelers Hub </h1>
         <ul className="nav-ul">
           <li>
-            <Link to="/"> Rockets </Link>
+            <Link onClick={underLine} className="link" to="/"> Rockets </Link>
+            <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
           </li>
         </ul>
       </div>
     </nav>
     <Routes>
       <Route path="/" element={<Rockets />} />
+      <Route path="/MyProfile" element={<MyProfile />} />
     </Routes>
   </div>
 );
