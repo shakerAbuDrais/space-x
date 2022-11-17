@@ -11,7 +11,6 @@ const Missions = () => {
       dispatch(getMissions());
     }
   });
-  console.log(missionsList);
 
   return (
     <div>
