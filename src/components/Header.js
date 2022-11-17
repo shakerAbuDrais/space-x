@@ -4,6 +4,7 @@ import Rockets from './Rockets';
 import MyProfile from './MyProfile';
 import Missions from './Missions';
 import logo from './images/planet.png';
+import Dragons from './Dragons';
 import './Header.css';
 
 const underLine = (e) => {
@@ -27,6 +28,7 @@ const Header = () => (
             <Link onClick={underLine} className="link" to="/"> Rockets </Link>
             <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
+            <Link onclick={underLine} className="link" to="/dragons">Dragons</Link>
           </li>
         </ul>
       </div>
@@ -35,6 +37,7 @@ const Header = () => (
       <Route path="/" element={<Rockets />} />
       <Route path="/Missions" element={<Missions />} />
       <Route path="/MyProfile" element={<MyProfile />} />
+      <Route path="/dragons" element={<Dragons />} />
     </Routes>
   </div>
 );
