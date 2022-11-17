@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Rockets from './Rockets';
 import MyProfile from './MyProfile';
+import Dragons from './Dragons';
 import './Header.css';
 
 const underLine = (e) => {
@@ -21,6 +22,7 @@ const Header = () => (
           <li>
             <Link onClick={underLine} className="link" to="/"> Rockets </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
+            <Link onclick={underLine} className="link" to="/dragons">Dragons</Link>
           </li>
         </ul>
       </div>
@@ -28,6 +30,7 @@ const Header = () => (
     <Routes>
       <Route path="/" element={<Rockets />} />
       <Route path="/MyProfile" element={<MyProfile />} />
+      <Route path="/dragons" element={<Dragons />} />
     </Routes>
   </div>
 );
