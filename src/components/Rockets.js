@@ -1,4 +1,3 @@
-/* eslint-disable import/no-named-as-default */
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Badge, Button } from 'react-bootstrap';
