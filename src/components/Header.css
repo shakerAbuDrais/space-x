@@ -5,3 +5,31 @@
 .link {
   text-decoration: none;
 }
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
