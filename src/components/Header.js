@@ -28,7 +28,7 @@ const Header = () => (
             <Link onClick={underLine} className="link" to="/"> Rockets </Link>
             <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
-            <Link onclick={underLine} className="link" to="/dragons">Dragons</Link>
+            <Link onClick={underLine} className="link" to="/dragons">Dragons</Link>
           </li>
         </ul>
       </div>
