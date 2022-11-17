@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { reservedDragons } from '../Redux/Dragons/Dragons';
 
 const Myprofile = () => {
   const rockets = useSelector((state) => state.rockets.rockets);
@@ -21,6 +22,15 @@ const Myprofile = () => {
         {reservedRockets.map((rocket) => (
           <li key={rocket.id}>
             {rocket.name}
+          </li>
+        ))}
+      </ul>
+
+      <h2>My Dragons</h2>
+      <ul>
+        {reservedDragons.map((dragon) => (
+          <li key={dragon.id}>
+            {dragon.name}
           </li>
         ))}
       </ul>

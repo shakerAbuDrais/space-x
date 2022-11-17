@@ -26,18 +26,18 @@ const Header = () => (
           </div>
           <li className="right-side">
             <Link onClick={underLine} className="link" to="/"> Rockets </Link>
+            <Link onClick={underLine} className="link" to="/dragons">Dragons</Link>
             <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
-            <Link onClick={underLine} className="link" to="/dragons">Dragons</Link>
           </li>
         </ul>
       </div>
     </nav>
     <Routes>
       <Route path="/" element={<Rockets />} />
+      <Route path="/dragons" element={<Dragons />} />
       <Route path="/Missions" element={<Missions />} />
       <Route path="/MyProfile" element={<MyProfile />} />
-      <Route path="/dragons" element={<Dragons />} />
     </Routes>
   </div>
 );
