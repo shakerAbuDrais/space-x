@@ -18,7 +18,6 @@ import './Dragons.css';
 const Dragons = () => {
   const dispatch = useDispatch();
   const dragons = useSelector((state) => state.dragons.dragons);
-  console.log(dragons);
 
   useEffect(() => {
     if (dragons.length === 0) {

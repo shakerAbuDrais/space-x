@@ -6,7 +6,6 @@ import './Dragons.css';
 function Dragon() {
   const dispatch = useDispatch();
   const dragons = useSelector((state) => state.dragons.dragons);
-  console.log(dragons);
 
   useEffect(() => {
     if (dragons.length === 0) {
@@ -19,7 +18,7 @@ function Dragon() {
       id={dragons.id}
       name={dragons.name}
       type={dragons.type}
-      images={dragons.images} />
+    />
   ));
   return (
     <ul className="dragon-container">
