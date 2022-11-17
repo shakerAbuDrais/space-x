@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Rockets from './Rockets';
 import MyProfile from './MyProfile';
+import Missions from './Missions';
+import logo from './images/planet.png';
 import './Header.css';
 
 const underLine = (e) => {
@@ -16,10 +18,14 @@ const Header = () => (
   <div>
     <nav className="header-nav">
       <div className="header">
-        <h1 className="title"> Space Travelers Hub </h1>
         <ul className="nav-ul">
-          <li>
+          <div className="left-side">
+            <img className="logo-img" src={logo} alt="planet-logo" />
+            <h1 className="title"> Space Travelers Hub </h1>
+          </div>
+          <li className="right-side">
             <Link onClick={underLine} className="link" to="/"> Rockets </Link>
+            <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
           </li>
         </ul>
@@ -27,6 +33,7 @@ const Header = () => (
     </nav>
     <Routes>
       <Route path="/" element={<Rockets />} />
+      <Route path="/Missions" element={<Missions />} />
       <Route path="/MyProfile" element={<MyProfile />} />
     </Routes>
   </div>
