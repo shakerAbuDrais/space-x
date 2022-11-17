@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const getMissions = createAsyncThunk('missions/getMissions', async () => {
+export const getMissions = createAsyncThunk('missions/getMissions', async () => {
   const response = await axios.get('https://api.spacexdata.com/v3/missions');
   const missions = response.data.map((mission) => ({
     mission_id: mission.mission_id,
@@ -24,29 +24,25 @@ const missionSlice = createSlice({
     leaveMission(state, action) {
       if (action.payload) {
         const temp = state.missions.filter((mission) => mission.id !== action.payload);
-        // eslint-disable-next-line
-        state.missions = temp;
+        const newState = state;
+        newState.missions = temp;
       }
     },
   },
   extraReducers: (builder) => {
     builder.addCase(getMissions.pending, (state) => {
-      // eslint-disable-next-line
-      state.loading = true;
+      const newState = state;
+      newState.loading = true;
     });
     builder.addCase(getMissions.fulfilled, (state, action) => {
-      // eslint-disable-next-line
-      state.loading = false;
-      // eslint-disable-next-line
-      state.missions = action.payload;
+      const newState = state;
+      newState.missions = action.payload;
     });
     builder.addCase(getMissions.rejected, (state, action) => {
-      // eslint-disable-next-line
-      state.loading = false;
-      // eslint-disable-next-line
-      state.missions = [];
-      // eslint-disable-next-line
-      state.error = action.error.message;
+      const newState = state;
+      newState.loading = false;
+      newState.missions = [];
+      newState.error = action.error.message;
     });
   },
 });
