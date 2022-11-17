@@ -23,7 +23,7 @@ const Dragons = () => {
             <h3>{dragon.name}</h3>
             <span>{dragon.type}</span>
             <p id={dragon.id}>
-              <Badge>
+              <Badge className="big">
                 {dragon.reserved ? 'Reserved' : ''}
               </Badge>
               {dragon.type}
