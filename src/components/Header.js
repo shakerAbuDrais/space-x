@@ -3,7 +3,8 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Rockets from './Rockets';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
-import logo from '../images/space-x.svg';
+import logo from './images/planet.png';
+import Dragons from './Dragons';
 import './Header.css';
 
 const underLine = (e) => {
@@ -18,12 +19,17 @@ const Header = () => (
   <div>
     <nav className="header-nav">
       <div className="header">
-        <img src={logo} alt="logo" />
-        <h1 className="title"> Space Travelers Hub </h1>
         <ul className="nav-ul">
-          <li><Link onClick={underLine} className="link" to="/"> Rockets </Link></li>
-          <li><Link onClick={underLine} className="link" to="/Missions"> Missions </Link></li>
-          <li><Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link></li>
+          <div className="left-side">
+            <img className="logo-img" src={logo} alt="planet-logo" />
+            <h1 className="title"> Space Travelers Hub </h1>
+          </div>
+          <li className="right-side">
+            <Link onClick={underLine} className="link" to="/"> Rockets </Link>
+            <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
+            <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
+            <Link onclick={underLine} className="link" to="/dragons">Dragons</Link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -31,6 +37,7 @@ const Header = () => (
       <Route path="/" element={<Rockets />} />
       <Route path="/Missions" element={<Missions />} />
       <Route path="/MyProfile" element={<MyProfile />} />
+      <Route path="/dragons" element={<Dragons />} />
     </Routes>
   </div>
 );
