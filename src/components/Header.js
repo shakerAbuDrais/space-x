@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Rockets from './Rockets';
-import MyProfile from './MyProfile';
 import Missions from './Missions';
+import MyProfile from './MyProfile';
 import logo from './images/planet.png';
 import Dragons from './Dragons';
 import './Header.css';
@@ -29,6 +29,7 @@ const Header = () => (
             <Link onClick={underLine} className="link" to="/dragons">Dragons</Link>
             <Link onClick={underLine} className="link" to="/Missions"> Missions </Link>
             <Link onClick={underLine} className="link" to="/MyProfile"> My Profile </Link>
+            <Link onClick={underLine} className="link" to="/dragons">Dragons</Link>
           </li>
         </ul>
       </div>
