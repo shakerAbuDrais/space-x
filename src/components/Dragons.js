@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Badge, Button } from 'react-bootstrap';
