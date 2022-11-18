@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -37,14 +35,17 @@ const dragonsSlice = createSlice({
   },
   extraReducers: {
     [getDragons.pending]: (state) => {
-      state.status = 'loading';
+      const newState = state;
+      newState.status = 'loading';
     },
     [getDragons.fulfilled]: (state, action) => {
-      state.status = 'success';
-      state.dragons = action.payload;
+      const newState = state;
+      newState.status = 'success';
+      newState.dragons = action.payload;
     },
     [getDragons.rejected]: (state) => {
-      state.status = 'failed';
+      const newState = state;
+      newState.status = 'failed';
     },
   },
 });

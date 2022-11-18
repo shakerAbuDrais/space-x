@@ -1,3 +1,78 @@
 * {
   margin: 0;
 }
+
+.mission_bold {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.missions_conteiner {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #e3e3e3;
+  border-bottom: none;
+}
+
+.missions_item {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr 1fr;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.missions_item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mission_name {
+  padding: 10px;
+  border-right: 1px solid #e3e3e3;
+}
+
+.mission_description {
+  padding: 10px;
+  border-right: 1px solid #e3e3e3;
+}
+
+.mission_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #e3e3e3;
+}
+
+.mission_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-leave_btn {
+  border-radius: 5px;
+  border: 1px solid #da3849;
+  background-color: transparent;
+  padding: 8px;
+  color: #da3849;
+}
+
+.btn-join_btn {
+  border-radius: 5px;
+  border: 1px solid #818181;
+  background-color: transparent;
+  padding: 8px;
+  color: #000;
+}
+
+.notActive_mark {
+  background-color: #6d757d !important;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.active_mark {
+  background-color: #25a2b7 !important;
+  font-size: 14px;
+}
